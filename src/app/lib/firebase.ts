@@ -5,13 +5,13 @@ import { getDatabase } from 'firebase/database';
 // WARNING: Hardcoding API keys is a security risk
 // These values will be visible in your client-side code
 const firebaseConfig = {
-  apiKey: "AIzaSyCpJ7SWrHy-Wq3eOnnKywGxfndu-1A9P9w",
-  authDomain: "sentiment-analysis-7f015.firebaseapp.com",
-  projectId: "sentiment-analysis-7f015",
-  storageBucket: "sentiment-analysis-7f015.firebasestorage.app",
-  messagingSenderId: "808887655294",
-  appId: "1:808887655294:web:2b2ee1511800598a4f712f",
-  measurementId: "G-E1S1CT110L"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
